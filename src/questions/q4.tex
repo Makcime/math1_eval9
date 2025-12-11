@@ -1,0 +1,51 @@
+\ifeabs{\question[4]}{\question[6]}
+On a construit un carré $ABCD$ de côté 4 cm. \\ \textbf{COMPLÈTE} la figure en traçant :
+\begin{enumerate}
+	\item Un cercle de centre $\versions{A}{B}{C}{D}$ qui passe par le point $\versions{B}{A}{C}{D}$.
+	\item Un cercle de centre $\versions{A}{B}{C}{D}$ et de rayon $\versions{5}{6}{7}{5}$ cm.
+\end{enumerate}
+
+\vspace{4cm}
+
+\begin{center}
+	\begin{tikzpicture}[scale=0.9]
+		% Carré ABCD de côté 4 (unités)
+		\coordinate (A) at (0,0);
+		\coordinate (B) at (4,0);
+		\coordinate (C) at (4,4);
+		\coordinate (D) at (0,4);
+
+		\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+		\node[below left]  at (A) {$A$};
+		\node[below right] at (B) {$B$};
+		\node[above right] at (C) {$C$};
+		\node[above left]  at (D) {$D$};
+
+		% Indication de la longueur AB
+		\draw[<->] (A) ++(0,-0.6) -- node[below]{4 cm} ($(B)+(0,-0.6)$);
+
+		% Cercles en rouge pour le correctif uniquement
+		\ifcorr{
+			{\color{red}
+					\versions{
+						% Version A : centre A, cercle passant par B (rayon 4) et rayon 5
+						\draw[thick,red] (A) circle (4);
+						\draw[thick,red] (A) circle (5);
+					}{
+						% Version B : centre B
+						\draw[thick,red] (B) circle (4);
+						\draw[thick,red] (B) circle (6);
+					}{
+						% Version C : centre C
+						\draw[thick,red] (C) circle (4);
+						\draw[thick,red] (C) circle (7);
+					}{
+						% Version D : centre D
+						\draw[thick,red] (D) circle (4);
+						\draw[thick,red] (D) circle (5);
+					}
+				}
+		}
+	\end{tikzpicture}
+\end{center}

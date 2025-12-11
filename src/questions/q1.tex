@@ -1,21 +1,194 @@
-% Content of the question, e.g.,
-\question[7]
-This is an open question with configurable witespace under it.
-Witespace will be replace by the answer if defined with the following command line.
+% Question 1
+\ifeabs{\question[4]}{\question[5]}
+\textbf{MESURE} l'amplitude de chacun des angles ci-dessous.
 
-\begin{verbatim}
-pdflatex "\def\withanswers{1} \input{src/main.tex}"
-\end{verbatim}
+\vspace{0.5em}
 
-% Optional blank to answer
-% \answerblank{3cm} % you can adjust "3cm" to whatever length you prefer for this specific question
+\begin{center}
+	\versions{
+		% Version A
+		\begin{tikzpicture}[scale=0.9]
+			% Angle 1 : aigu (35°)
+			\coordinate (O1) at (0,0);
+			\draw[thick] (O1) -- ++(3,0);
+			\draw[thick] (O1) -- ++(35:3);
+			\draw (O1) ++(0.8,0) arc (0:35:0.8);
+			\node at ($(O1)+(1.3,0.45)$) {1};
 
-you can either draw 1 line for answer with \verb"\drawlines"
-\\\drawline
+			% Angle 2 : aigu (60°)
+			\coordinate (O2) at (5,0);
+			\draw[thick] (O2) -- ++(3,0);
+			\draw[thick] (O2) -- ++(60:3);
+			\draw (O2) ++(0.8,0) arc (0:60:0.8);
+			\node at ($(O2)+(1.1,0.7)$) {2};
 
-or multiple ones with \verb"\drawmultilines{5}"
-\\\drawmultilines{5}
+			% Angle 3 : droit (90°)
+			\coordinate (O3) at (10,0);
+			\draw[thick] (O3) -- ++(3,0);
+			\draw[thick] (O3) -- ++(90:3);
+			\draw (O3) ++(0.8,0) arc (0:90:0.8);
+			\node at ($(O3)+(0.9,0.9)$) {3};
 
+			% Angle 4 : obtus (130°)
+			\coordinate (O4) at (1,-5);
+			\draw[thick] (O4) -- ++(3,0);
+			\draw[thick] (O4) -- ++(130:3);
+			\draw (O4) ++(0.8,0) arc (0:130:0.8);
+			\node at ($(O4)+(1.0,0.8)$) {4};
 
-\inlineanswer{a1}
+			% Angle 5 : rentrant (220°)
+			\coordinate (O5) at (7,-5);
+			\draw[thick] (O5) -- ++(3,0);
+			\draw[thick] (O5) -- ++(220:3);
+			\draw (O5) ++(0.8,0) arc (0:220:0.8);
+			\node at ($(O5)+(0.5,1.1)$) {5};
+		\end{tikzpicture}
+	}{
+		% Version B
+		\begin{tikzpicture}[scale=0.9]
+			% Angle 1 : aigu (25°)
+			\coordinate (O1) at (0,0);
+			\draw[thick] (O1) -- ++(3,0);
+			\draw[thick] (O1) -- ++(25:3);
+			\draw (O1) ++(0.8,0) arc (0:25:0.8);
+			\node at ($(O1)+(1.3,0.45)$) {1};
 
+			% Angle 2 : aigu (50°)
+			\coordinate (O2) at (5,0);
+			\draw[thick] (O2) -- ++(3,0);
+			\draw[thick] (O2) -- ++(50:3);
+			\draw (O2) ++(0.8,0) arc (0:50:0.8);
+			\node at ($(O2)+(1.1,0.7)$) {2};
+
+			% Angle 3 : droit (90°)
+			\coordinate (O3) at (10,0);
+			\draw[thick] (O3) -- ++(3,0);
+			\draw[thick] (O3) -- ++(90:3);
+			\draw (O3) ++(0.8,0) arc (0:90:0.8);
+			\node at ($(O3)+(0.9,0.9)$) {3};
+
+			% Angle 4 : obtus (140°)
+			\coordinate (O4) at (1,-5);
+			\draw[thick] (O4) -- ++(3,0);
+			\draw[thick] (O4) -- ++(140:3);
+			\draw (O4) ++(0.8,0) arc (0:140:0.8);
+			\node at ($(O4)+(1.0,0.8)$) {4};
+
+			% Angle 5 : rentrant (230°)
+			\coordinate (O5) at (7,-5);
+			\draw[thick] (O5) -- ++(3,0);
+			\draw[thick] (O5) -- ++(230:3);
+			\draw (O5) ++(0.8,0) arc (0:230:0.8);
+			\node at ($(O5)+(0.5,1.1)$) {5};
+		\end{tikzpicture}
+	}{
+		% Version C
+		\begin{tikzpicture}[scale=0.9]
+			% Angle 1 : aigu (40°)
+			\coordinate (O1) at (0,0);
+			\draw[thick] (O1) -- ++(3,0);
+			\draw[thick] (O1) -- ++(40:3);
+			\draw (O1) ++(0.8,0) arc (0:40:0.8);
+			\node at ($(O1)+(1.3,0.45)$) {1};
+
+			% Angle 2 : aigu (70°)
+			\coordinate (O2) at (5,0);
+			\draw[thick] (O2) -- ++(3,0);
+			\draw[thick] (O2) -- ++(70:3);
+			\draw (O2) ++(0.8,0) arc (0:70:0.8);
+			\node at ($(O2)+(1.1,0.7)$) {2};
+
+			% Angle 3 : droit (90°)
+			\coordinate (O3) at (10,0);
+			\draw[thick] (O3) -- ++(3,0);
+			\draw[thick] (O3) -- ++(90:3);
+			\draw (O3) ++(0.8,0) arc (0:90:0.8);
+			\node at ($(O3)+(0.9,0.9)$) {3};
+
+			% Angle 4 : obtus (120°)
+			\coordinate (O4) at (1,-5);
+			\draw[thick] (O4) -- ++(3,0);
+			\draw[thick] (O4) -- ++(120:3);
+			\draw (O4) ++(0.8,0) arc (0:120:0.8);
+			\node at ($(O4)+(1.0,0.8)$) {4};
+
+			% Angle 5 : rentrant (215°)
+			\coordinate (O5) at (7,-5);
+			\draw[thick] (O5) -- ++(3,0);
+			\draw[thick] (O5) -- ++(215:3);
+			\draw (O5) ++(0.8,0) arc (0:215:0.8);
+			\node at ($(O5)+(0.5,1.1)$) {5};
+		\end{tikzpicture}
+	}{
+		% Version D
+		\begin{tikzpicture}[scale=0.9]
+			% Angle 1 : aigu (30°)
+			\coordinate (OA) at (0,0);
+			\draw[thick] (OA) -- ++(3,0);
+			\draw[thick] (OA) -- ++(30:3);
+			\draw (OA) ++(0.8,0) arc (0:30:0.8);
+			\node at ($(OA)+(1.3,0.45)$) {1};
+
+			% Angle 2 : droit (90°)
+			\coordinate (OB) at (6,0);
+			\draw[thick] (OB) -- ++(3,0);
+			\draw[thick] (OB) -- ++(90:3);
+			\draw (OB) ++(0.8,0) arc (0:90:0.8);
+			\node at ($(OB)+(0.9,0.9)$) {2};
+
+			% Angle 3 : obtus (135°)
+			\coordinate (OC) at (1,-5);
+			\draw[thick] (OC) -- ++(3,0);
+			\draw[thick] (OC) -- ++(135:3);
+			\draw (OC) ++(0.8,0) arc (0:135:0.8);
+			\node at ($(OC)+(1.0,0.8)$) {3};
+
+			% Angle 4 : rentrant (225°)
+			\coordinate (OD) at (7,-5);
+			\draw[thick] (OD) -- ++(3,0);
+			\draw[thick] (OD) -- ++(225:3);
+			\draw (OD) ++(0.8,0) arc (0:225:0.8);
+			\node at ($(OD)+(0.5,1.1)$) {4};
+		\end{tikzpicture}
+	}
+\end{center}
+
+\vspace{0.5em}
+
+Complète les mesures :
+\versions{
+	% Version A
+	\begin{enumerate}
+		\item Angle 1 : $\corrr{35^\circ}{\dotfill}$
+		\item Angle 2 : $\corrr{60^\circ}{\dotfill}$
+		\item Angle 3 : $\corrr{90^\circ}{\dotfill}$
+		\item Angle 4 : $\corrr{130^\circ}{\dotfill}$
+		\item Angle 5 : $\corrr{220^\circ}{\dotfill}$
+	\end{enumerate}
+}{
+	% Version B
+	\begin{enumerate}
+		\item Angle 1 : $\corrr{25^\circ}{\dotfill}$
+		\item Angle 2 : $\corrr{50^\circ}{\dotfill}$
+		\item Angle 3 : $\corrr{90^\circ}{\dotfill}$
+		\item Angle 4 : $\corrr{140^\circ}{\dotfill}$
+		\item Angle 5 : $\corrr{230^\circ}{\dotfill}$
+	\end{enumerate}
+}{
+	% Version C
+	\begin{enumerate}
+		\item Angle 1 : $\corrr{40^\circ}{\dotfill}$
+		\item Angle 2 : $\corrr{70^\circ}{\dotfill}$
+		\item Angle 3 : $\corrr{90^\circ}{\dotfill}$
+		\item Angle 4 : $\corrr{120^\circ}{\dotfill}$
+		\item Angle 5 : $\corrr{215^\circ}{\dotfill}$
+	\end{enumerate}
+}{
+	% Version D (4 angles uniquement)
+	\begin{enumerate}
+		\item Angle 1 : $\corrr{30^\circ}{\dotfill}$
+		\item Angle 2 : $\corrr{90^\circ}{\dotfill}$
+		\item Angle 3 : $\corrr{135^\circ}{\dotfill}$
+		\item Angle 4 : $\corrr{225^\circ}{\dotfill}$
+	\end{enumerate}
+}
