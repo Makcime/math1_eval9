@@ -2,20 +2,20 @@
 % Titles 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\EvalCnt}{4} % total des points/pages
+\newcommand{\EvalCnt}{6} % total des points/pages
 \newcommand{\doctitle}{Évaluation journal de bord n$^{\circ}$\EvalCnt}
 \newcommand{\shortitle}{EvalJDB\EvalCnt}
-\newcommand{\docsubtitle}{Chapitre X - Titre du chapitre}
-\newcommand{\course}{Mathématiques - 2C}
+\newcommand{\docsubtitle}{Chapitre 4 - Outils et constructions géométriques}
+\newcommand{\course}{Mathématiques - 1C}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Objectives
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\objectives}{
-	\item Comparer les croissances des fonctions exponentielles.
-	\item Résoudre une équation exponentielle simple.
-	\item Utiliser une fonction logarithme ou exponentielle pour résoudre un problème.
+	\item Utiliser les instruments de géométrie (équerre, compas, rapporteur et latte).
+	\item Mesurer l’amplitudes des angles.
+	\item Tracer des angles.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -24,12 +24,11 @@
 
 \newcommand{\qseq}{
 	% \section{Première partie}
-	\inputqora{1}
-	\input{src/questions/q2}
-	% ... add more questions as needed
-
+	\input{src/questions/q1}
 	\newpage
-	% \section{Deuxème partie}
-	\inputqora{3}
-	% ... add more answers as needed
+	\input{src/questions/q2}
+	\newpage
+	\input{src/questions/q3}
+	\newpage
+	\input{src/questions/q4}
 }
