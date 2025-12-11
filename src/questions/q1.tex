@@ -1,0 +1,21 @@
+% Content of the question, e.g.,
+\question[7]
+This is an open question with configurable witespace under it.
+Witespace will be replace by the answer if defined with the following command line.
+
+\begin{verbatim}
+pdflatex "\def\withanswers{1} \input{src/main.tex}"
+\end{verbatim}
+
+% Optional blank to answer
+% \answerblank{3cm} % you can adjust "3cm" to whatever length you prefer for this specific question
+
+you can either draw 1 line for answer with \verb"\drawlines"
+\\\drawline
+
+or multiple ones with \verb"\drawmultilines{5}"
+\\\drawmultilines{5}
+
+
+\inlineanswer{a1}
+

@@ -1,0 +1,22 @@
+\documentclass[14pt, a4paper]{extarticle}
+\usepackage{base/evaltemplate}
+
+\input{src/config.tex}
+
+\begin{document}
+
+\boldmath
+% Display header with logo, name, classe, etc
+\ifnotcorr{
+	\thispagestyle{firstpage}
+	\hdr
+	% Display the title and subtitle
+	\titlebox{\doctitle}{\docsubtitle}
+
+	\input{base/crit.tex}
+	\newpage
+}
+
+\qseq
+
+\end{document}
